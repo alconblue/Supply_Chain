@@ -1,0 +1,7 @@
+<h1>Sessions#new</h1>
+<p>Find me in app/views/sessions/new.html.erb</p>
+<%= form_tag("/session", method: "get") do %>
+  <%= label_tag(:token, "Search for:") %>
+  <%= text_field_tag(:token) %>
+  <%= submit_tag("Search") %>
+<% end %>

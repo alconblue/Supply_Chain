@@ -1,0 +1,17 @@
+<h1>Drugadd#new</h1>
+<p>Find me in app/views/drugadd/new.html.erb</p>
+<%= form_tag("/drugadd", method: "get") do %>
+  <%= label_tag(:batch_no, "Batch Number") %>
+  <%= text_field_tag(:batch_no) %><br>
+  <%= label_tag(:description, "Description") %>
+  <%= text_field_tag(:description) %><br>
+  <%= label_tag(:drug_name, "Drug Name") %>
+  <%= text_field_tag(:drug_name) %><br>
+  <%= label_tag(:drug_id, "Drug Id") %>
+  <%= number_field_tag(:drug_id) %><br>
+  <%= label_tag(:expiry_date, "Expiry Date") %>
+  <%= text_field_tag(:expiry_date) %><br>
+  <%= label_tag(:MRP, "MRP") %>
+  <%= number_field_tag(:MRP) %><br>
+  <%= submit_tag("Add Drug") %>
+<% end %>

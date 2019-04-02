@@ -1,0 +1,2 @@
+module DrugaddHelper
+end
