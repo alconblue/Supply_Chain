@@ -3,7 +3,7 @@ class RejectController < ApplicationController
   def reject
     @manufacturer_license.approved = 2
     @manufacturer_license.save
-    redirect_to '/manufacturer_licenses'
+    redirect_to '/'
   end
   private
   def set_manufacturer_license

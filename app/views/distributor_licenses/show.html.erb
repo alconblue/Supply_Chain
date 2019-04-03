@@ -27,37 +27,51 @@
 
 <p>
   <strong>Resolution By Board:</strong>
+  <% if !@distributor_license.resolution_by_board_file_name.nil? %>
   <%= link_to "Resolution By Board", @distributor_license.resolution_by_board.url(:original, false) %>
+  <%end%>
 </p>
 
 <p>
   <strong>Blueprint:</strong>
+  <% if !@distributor_license.resolution_by_board_file_name.nil? %>
   <%= link_to "Blueprint", @distributor_license.blueprint.url(:original, false) %>
+  <%end%>
 </p>
 
 <p>
   <strong>Proof Of Ownership:</strong>
+  <% if !@distributor_license.resolution_by_board_file_name.nil? %>
   <%= link_to "Proof Of Ownership", @distributor_license.proof_of_ownership.url(:original, false) %>
+  <%end%>
 </p>
 
 <p>
   <strong>Pharmacist Affidavit:</strong>
+  <% if !@distributor_license.resolution_by_board_file_name.nil? %>
   <%= link_to "Pharmacist Affidavit", @distributor_license.pharmacist_affidavit.url(:original, false) %>
+  <%end%>
 </p>
 
 <p>
   <strong>Degree Certificate:</strong>
+  <% if !@distributor_license.resolution_by_board_file_name.nil? %>
   <%= link_to "Degree Certificate", @distributor_license.degree_certificate.url(:original, false) %>
+  <%end%>
 </p>
 
 <p>
   <strong>Invoice of Refrigerator:</strong>
+  <% if !@distributor_license.resolution_by_board_file_name.nil? %>
   <%= link_to "Invoice of Refrigerator", @distributor_license.invoice_of_refrigerator.url(:original, false) %>
+  <%end%>
 </p>
 
 <p>
   <strong>Invoice of AC:</strong>
+  <% if !@distributor_license.resolution_by_board_file_name.nil? %>
   <%= link_to "Invoice of AC", @distributor_license.invoice_of_ac.url(:original, false) %>
+  <%end%>
 </p>
 
 <p>
@@ -65,5 +79,10 @@
   <%= @distributor_license.signature %>
 </p>
 
+<% if current_user.user_type == 0 %>
+<%= link_to 'Accept', accept_distributor_path(@distributor_license) %>
+<%= link_to 'Reject', reject_distributor_path(@distributor_license) %>
+<%end%>
+<br>
 <%= link_to 'Edit', edit_distributor_license_path(@distributor_license) %> |
 <%= link_to 'Back', distributor_licenses_path %>

@@ -31,7 +31,8 @@ class DistributorLicensesController < ApplicationController
   # POST /distributor_licenses.json
   def create
     @distributor_license = DistributorLicense.new(distributor_license_params)
-
+    @distributor_license.user_id = current_user.id
+    @distributor_license.approved = 0
     respond_to do |format|
       if @distributor_license.save
         format.html { redirect_to @distributor_license, notice: 'Distributor license was successfully created.' }

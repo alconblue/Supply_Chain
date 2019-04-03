@@ -27,28 +27,41 @@
 
 <p>
   <strong>Blueprint:</strong>
+  <% if !@pharmacy_license.resolution_by_board_file_name.nil? %>
   <%= link_to "Blueprint", @pharmacy_license.blueprint.url(:original, false) %>
+  <%end%>
 </p>
 
 <p>
   <strong>Proof Of Ownership:</strong>
+  <% if !@pharmacy_license.proof_of_ownership.nil? %>
   <%= link_to "Proof Of Ownership", @pharmacy_license.proof_of_ownership.url(:original, false) %>
+  <%end%>
 </p>
 
 <p>
   <strong>Pharmacist Affidavit:</strong>
+  <% if !@pharmacy_license.pharmacist_affidavit.nil? %>
   <%= link_to "Pharmacist Affidavit", @pharmacy_license.pharmacist_affidavit.url(:original, false) %>
+  <%end%>
 </p>
 
 <p>
   <strong>Affidavit of Nonconviction:</strong>
+  <% if !@pharmacy_license.affidavit_of_nonconviction.nil? %>
   <%= link_to "Affidavit of Nonconviction", @pharmacy_license.affidavit_of_nonconviction.url(:original, false) %>
+  <%end%>
 </p>
 
 <p>
   <strong>Signature:</strong>
   <%= @pharmacy_license.signature %>
 </p>
+
+<% if current_user.user_type == 0 %>
+<%= link_to 'Accept', accept_pharmacist_path(@pharmacy_license) %>
+<%= link_to 'Reject', reject_pharmacist_path(@pharmacy_license) %>
+<%end%>
 
 <%= link_to 'Edit', edit_pharmacy_license_path(@pharmacy_license) %> |
 <%= link_to 'Back', pharmacy_licenses_path %>

@@ -1,18 +1,18 @@
-class ApproveController < ApplicationController
-  before_action :set_manufacturer_license, only: [:approve]
+class ApprovePharmacistController < ApplicationController
+  before_action :set_pharmacy_license, only: [:approve]
   def approve
-    if current_user.user_type == 0
-      @manufacturer_license.approved = 1
-      @manufacturer_license.save
-      session[:user_id] = @manufacturer_license.user_id
+  	if current_user.user_type == 0
+    	@pharmacy_license.approved = 1
+      @pharmacy_license.save
+      session[:user_id] = @pharmacy_license.user_id
     else
       redirect_to '/'
     end
   end
 
   def addLicense
-    if current_user.user_type == 0
-      s = "curl 'http://10.52.38.162:3000/api/org.nitk.drugtraceability.Trader?access_token="
+  	if current_user.user_type == 0
+    	s = "curl 'http://10.52.38.162:3000/api/org.nitk.drugtraceability.Trader?access_token="
     	s += current_user.token
     	s += "' -H 'Accept: application/json' --compressed -H 'Content-Type: application/json' --data '{\n  \"$class\": \"org.nitk.drugtraceability.Trader\",\n  \"tradeId\": \""
     	s += session[:user_id].to_s
@@ -47,10 +47,11 @@ class ApproveController < ApplicationController
   end
 
   private
-  def set_manufacturer_license
-    @manufacturer_license = ManufacturerLicense.find(params[:id])
+  def set_pharmacy_license
+    @pharmacy_license = PharmacyLicense.find(params[:id])
   end
   def approve_params
       params.permit(:licenseno, :type, :products_allowed, :expiry_date, :user, :tradeId, :firstName, :lastName, :access)
   end
+
 end
