@@ -4,7 +4,13 @@ class DistributorLicensesController < ApplicationController
   # GET /distributor_licenses
   # GET /distributor_licenses.json
   def index
-    @distributor_licenses = DistributorLicense.all
+    if current_user.user_type==0
+      @distributor_licenses = DistributorLicense.where(:approved => 0)
+    elsif current_user.user_type == 2
+      @distributor_licenses = DistributorLicense.where(:user_id => current_user.id)
+    else
+      redirect_to "/"
+    end
   end
 
   # GET /distributor_licenses/1

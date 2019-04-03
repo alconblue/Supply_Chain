@@ -26,6 +26,41 @@
 </p>
 
 <p>
+  <strong>Resolution By Board:</strong>
+  <%= link_to "Resolution By Board", @distributor_license.resolution_by_board.url(:original, false) %>
+</p>
+
+<p>
+  <strong>Blueprint:</strong>
+  <%= link_to "Blueprint", @distributor_license.blueprint.url(:original, false) %>
+</p>
+
+<p>
+  <strong>Proof Of Ownership:</strong>
+  <%= link_to "Proof Of Ownership", @distributor_license.proof_of_ownership.url(:original, false) %>
+</p>
+
+<p>
+  <strong>Pharmacist Affidavit:</strong>
+  <%= link_to "Pharmacist Affidavit", @distributor_license.pharmacist_affidavit.url(:original, false) %>
+</p>
+
+<p>
+  <strong>Degree Certificate:</strong>
+  <%= link_to "Degree Certificate", @distributor_license.degree_certificate.url(:original, false) %>
+</p>
+
+<p>
+  <strong>Invoice of Refrigerator:</strong>
+  <%= link_to "Invoice of Refrigerator", @distributor_license.invoice_of_refrigerator.url(:original, false) %>
+</p>
+
+<p>
+  <strong>Invoice of AC:</strong>
+  <%= link_to "Invoice of AC", @distributor_license.invoice_of_ac.url(:original, false) %>
+</p>
+
+<p>
   <strong>Signature:</strong>
   <%= @distributor_license.signature %>
 </p>

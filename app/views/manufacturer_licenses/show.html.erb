@@ -26,6 +26,36 @@
 </p>
 
 <p>
+  <strong>Resolution By Board:</strong>
+  <%= link_to "Resolution By Board", @manufacturer_license.resolution_by_board.url(:original, false) %>
+</p>
+
+<p>
+  <strong>Blueprint:</strong>
+  <%= link_to "Blueprint", @manufacturer_license.blueprint.url(:original, false) %>
+</p>
+
+<p>
+  <strong>Proof Of Ownership:</strong>
+  <%= link_to "Proof Of Ownership", @manufacturer_license.proof_of_ownership.url(:original, false) %>
+</p>
+
+<p>
+  <strong>List of Equipments:</strong>
+  <%= link_to "List of Equipments", @manufacturer_license.list_of_equipments.url(:original, false) %>
+</p>
+
+<p>
+  <strong>List of Staff:</strong>
+  <%= link_to "List of Staff", @manufacturer_license.list_of_staff.url(:original, false) %>
+</p>
+
+<p>
+  <strong>List of Products:</strong>
+  <%= link_to "List of Products", @manufacturer_license.list_of_products.url(:original, false) %>
+</p>
+
+<p>
   <strong>Signature:</strong>
   <%= @manufacturer_license.signature %>
 </p>

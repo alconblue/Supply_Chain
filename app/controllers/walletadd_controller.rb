@@ -14,6 +14,7 @@ class WalletaddController < ApplicationController
     # headers: {Accept: "application/json"}
     # )
   	@s1 = s
+    redirect_to '/'
   end
 
   def new

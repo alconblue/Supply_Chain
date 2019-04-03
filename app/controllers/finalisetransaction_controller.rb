@@ -10,6 +10,7 @@ class FinalisetransactionController < ApplicationController
   	s += "\"\n}'"
   	system(s)
   	@s3 = s
+    redirect_to '/'
   end
 
   def new
