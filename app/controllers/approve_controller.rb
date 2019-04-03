@@ -33,8 +33,9 @@ class ApproveController < ApplicationController
   	s += session[:user_id].to_s
   	s += "\"\n}'"
     system(s)
-    s = 'composer identity issue -u '+params[:firstName]+session[:user_id].to_s+' -c admin@drugtraceability-network  -a "resource:org.nitk.drugtraceability.Trader#'+session[:user_id].to_s+'"'
+    s = 'composer identity issue -u '+params[:firstName]+session[:user_id].to_s+' -c admin@drugtraceability-network -f "c.card" -a "resource:org.nitk.drugtraceability.Trader#'+session[:user_id].to_s+'"'
     system(s)
+    
     redirect_to '/manufacturer_licenses'
   end
 
