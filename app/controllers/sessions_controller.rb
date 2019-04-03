@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
     # end
     current_user.token = params[:token]
     current_user.save
-    redirect_to '/initiatetransaction/new'
+    redirect_to '/'
   end
 
   def destroy

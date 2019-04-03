@@ -10,6 +10,7 @@ class InitiatetransactionController < ApplicationController
   	s += "\"\n}'"
   	system(s)
   	@s2 = s
+    redirect_to '/'
   end
 
   def new

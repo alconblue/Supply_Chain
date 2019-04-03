@@ -26,6 +26,26 @@
 </p>
 
 <p>
+  <strong>Blueprint:</strong>
+  <%= link_to "Blueprint", @pharmacy_license.blueprint.url(:original, false) %>
+</p>
+
+<p>
+  <strong>Proof Of Ownership:</strong>
+  <%= link_to "Proof Of Ownership", @pharmacy_license.proof_of_ownership.url(:original, false) %>
+</p>
+
+<p>
+  <strong>Pharmacist Affidavit:</strong>
+  <%= link_to "Pharmacist Affidavit", @pharmacy_license.pharmacist_affidavit.url(:original, false) %>
+</p>
+
+<p>
+  <strong>Affidavit of Nonconviction:</strong>
+  <%= link_to "Affidavit of Nonconviction", @pharmacy_license.affidavit_of_nonconviction.url(:original, false) %>
+</p>
+
+<p>
   <strong>Signature:</strong>
   <%= @pharmacy_license.signature %>
 </p>

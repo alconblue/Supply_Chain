@@ -28,6 +28,7 @@ class DrugaddController < ApplicationController
     # url: st,
     # headers: {Accept: "application/json"}
     # )
+    redirect_to '/'
   	@s1 = s
   end
 
