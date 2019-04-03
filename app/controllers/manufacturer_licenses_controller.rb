@@ -25,7 +25,8 @@ class ManufacturerLicensesController < ApplicationController
   # POST /manufacturer_licenses.json
   def create
     @manufacturer_license = ManufacturerLicense.new(manufacturer_license_params)
-
+    @manufacturer_license.approved = 0
+    @manufacturer_license.user_id = current_user.id
     respond_to do |format|
       if @manufacturer_license.save
         format.html { redirect_to @manufacturer_license, notice: 'Manufacturer license was successfully created.' }

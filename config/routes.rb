@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'reject/:id', to: "reject#reject", as: 'reject_manufacturer'
+  get 'approve/:id', to: "approve#approve", as: 'accept_manufacturer'
+  get 'approve', to: 'approve#addLicense'
   get 'walletadd',to:"walletadd#create"
   get 'walletadd/new'
   get 'walletadd/destroy'

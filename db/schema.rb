@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_03_040230) do
+ActiveRecord::Schema.define(version: 2019_04_03_141214) do
 
   create_table "customer_licenses", force: :cascade do |t|
     t.string "applicant_name"
@@ -98,6 +98,7 @@ ActiveRecord::Schema.define(version: 2019_04_03_040230) do
     t.bigint "list_of_products_file_size"
     t.datetime "list_of_products_updated_at"
     t.integer "approved"
+    t.integer "user_id"
   end
 
   create_table "pharmacy_licenses", force: :cascade do |t|

@@ -1,0 +1,2 @@
+module RejectHelper
+end

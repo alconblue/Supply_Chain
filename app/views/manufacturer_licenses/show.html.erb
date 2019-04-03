@@ -29,6 +29,7 @@
   <strong>Signature:</strong>
   <%= @manufacturer_license.signature %>
 </p>
-
+<%= link_to 'Accept', accept_manufacturer_path(@manufacturer_license) %>
+<%= link_to 'Reject', reject_manufacturer_path(@manufacturer_license) %>
 <%= link_to 'Edit', edit_manufacturer_license_path(@manufacturer_license) %> |
 <%= link_to 'Back', manufacturer_licenses_path %>
