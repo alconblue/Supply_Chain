@@ -1,0 +1,23 @@
+<h1>Approve#approve</h1>
+<p>Find me in app/views/approve/approve.html.erb</p>
+<%= form_tag("/approve_distributor", method: "get") do %>
+    <%= label_tag(:tradeId, "Trade Id") %>
+    <%= text_field_tag(:tradeId) %><br>
+    <%= label_tag(:firstName, "First Name") %>
+    <%= text_field_tag(:firstName) %><br>
+    <%= label_tag(:lastName, "Last Name") %>
+    <%= text_field_tag(:lastName) %><br>
+    <%= label_tag(:access, "Access") %>
+    <%= text_field_tag(:access) %><br>
+    <%= label_tag(:licenseno, "License Number") %>
+    <%= text_field_tag(:licenseno) %><br>
+    <%= label_tag(:type, "type") %>
+    <%= text_field_tag(:type) %><br>
+    <%= label_tag(:products_allowed, "Products Allowed") %>
+    <%= text_field_tag(:products_allowed) %><br>
+    <%= label_tag(:expiry_date, "Expiry Date") %>
+    <%= text_field_tag(:expiry_date) %><br>
+    <%= label_tag(:user, "user") %>
+    <%= number_field_tag(:user) %><br>
+    <%= submit_tag("Issue License") %>
+<% end %>

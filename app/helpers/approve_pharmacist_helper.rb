@@ -1,0 +1,2 @@
+module ApprovePharmacistHelper
+end

@@ -25,7 +25,8 @@ class PharmacyLicensesController < ApplicationController
   # POST /pharmacy_licenses.json
   def create
     @pharmacy_license = PharmacyLicense.new(pharmacy_license_params)
-
+    @pharmacy_license.user_id = current_user.id
+    @pharmacy_license.approved = 0
     respond_to do |format|
       if @pharmacy_license.save
         format.html { redirect_to @pharmacy_license, notice: 'Pharmacy license was successfully created.' }

@@ -25,7 +25,8 @@ class CustomerLicensesController < ApplicationController
   # POST /customer_licenses.json
   def create
     @customer_license = CustomerLicense.new(customer_license_params)
-
+    @customer_license.user_id = current_user.id 
+    @customer_license.approved = 0
     respond_to do |format|
       if @customer_license.save
         format.html { redirect_to @customer_license, notice: 'Customer license was successfully created.' }

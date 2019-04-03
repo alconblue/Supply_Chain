@@ -30,5 +30,10 @@
   <%= @customer_license.signature %>
 </p>
 
+<% if current_user.user_type == 0 %>
+<%= link_to 'Accept', accept_customer_path(@customer_license) %>
+<%= link_to 'Reject', reject_customer_path(@customer_license) %>
+<%end%>
+
 <%= link_to 'Edit', edit_customer_license_path(@customer_license) %> |
 <%= link_to 'Back', customer_licenses_path %>

@@ -1,10 +1,25 @@
 Rails.application.routes.draw do
+
+  get 'reject_customer/:id', to: 'reject_customer#reject', as: 'reject_customer'
+  get 'approve_costumer/:id', to: 'approve_costumer#approve', as: 'accept_customer'
+  get 'approve_costumer', to: 'approve_costumer#addLicense'
+
+  get 'reject_pharmacist/:id', to: 'reject_pharmacist#reject', as: 'reject_pharmacist'
+  get 'approve_pharmacist/:id', to: 'approve_pharmacist#approve', as: 'accept_pharmacist'
+  get 'approve_pharmacist', to: 'approve_pharmacist#addLicense'
+
+  get 'reject_distributor/:id', to: 'reject_distributor#reject', as: 'reject_distributor'
+  get 'approve_distributor/:id', to: 'approve_distributor#approve', as: 'accept_distributor'
+  get 'approve_distributor', to: 'approve_distributor#addLicense'
+
   get 'reject/:id', to: "reject#reject", as: 'reject_manufacturer'
   get 'approve/:id', to: "approve#approve", as: 'accept_manufacturer'
   get 'approve', to: 'approve#addLicense'
+
   get 'walletadd',to:"walletadd#create"
   get 'walletadd/new'
   get 'walletadd/destroy'
+
   get 'traderadd',to:"traderadd#create"
   get 'traderadd/new'
   get 'traderadd/destroy'
