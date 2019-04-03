@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+  resources :distributor_licenses
+  resources :customer_licenses
+  resources :pharmacy_licenses
+  resources :manufacturer_licenses
+  
   get 'finalisetransaction', to: "finalisetransaction#create"
   get 'finalisetransaction/new'
   get 'finalisetransaction/destroy'
@@ -8,6 +14,7 @@ Rails.application.routes.draw do
   get 'issuelicense', to: "issuelicense#create"
   get 'issuelicense/new'
   get 'issuelicense/destroy'
+
   get 'drugadd/new'
   get 'drugadd', to: "drugadd#create"
   get 'drugadd/destroy'

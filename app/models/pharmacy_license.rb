@@ -1,0 +1,2 @@
+class PharmacyLicense < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class DistributorLicense < ApplicationRecord
+end

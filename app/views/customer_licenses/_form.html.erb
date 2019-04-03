@@ -1,0 +1,82 @@
+<%= form_with(model: manufacturer_contract, local: true) do |form| %>
+  <% if manufacturer_contract.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(manufacturer_contract.errors.count, "error") %> prohibited this manufacturer_contract from being saved:</h2>
+
+      <ul>
+      <% manufacturer_contract.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :license_id %>
+    <%= form.text_field :license_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mfg_lic_no %>
+    <%= form.text_field :mfg_lic_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :drug_id %>
+    <%= form.text_field :drug_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :license_start_date %>
+    <%= form.datetime_select :license_start_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :no_of_batches %>
+    <%= form.number_field :no_of_batches %>
+  </div>
+
+  <div class="field">
+    <%= form.label :no_in_batch %>
+    <%= form.number_field :no_in_batch %>
+  </div>
+
+  <div class="field">
+    <%= form.label :license_end_date %>
+    <%= form.datetime_select :license_end_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :best_before_months %>
+    <%= form.text_field :best_before_months %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contents %>
+    <%= form.text_area :contents %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_batch_no %>
+    <%= form.text_field :start_batch_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_batch_no %>
+    <%= form.text_field :end_batch_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dosage %>
+    <%= form.text_field :dosage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mrp %>
+    <%= form.text_field :mrp %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

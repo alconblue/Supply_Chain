@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Applicant name:</strong>
+  <%= @distributor_license.applicant_name %>
+</p>
+
+<p>
+  <strong>Applicant contact:</strong>
+  <%= @distributor_license.applicant_contact %>
+</p>
+
+<p>
+  <strong>Applicant address:</strong>
+  <%= @distributor_license.applicant_address %>
+</p>
+
+<p>
+  <strong>Receipt number:</strong>
+  <%= @distributor_license.receipt_number %>
+</p>
+
+<p>
+  <strong>Ein:</strong>
+  <%= @distributor_license.ein %>
+</p>
+
+<p>
+  <strong>Signature:</strong>
+  <%= @distributor_license.signature %>
+</p>
+
+<%= link_to 'Edit', edit_distributor_license_path(@distributor_license) %> |
+<%= link_to 'Back', distributor_licenses_path %>

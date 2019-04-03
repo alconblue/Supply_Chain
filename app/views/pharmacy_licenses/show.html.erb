@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Applicant name:</strong>
+  <%= @pharmacy_license.applicant_name %>
+</p>
+
+<p>
+  <strong>Applicant contact:</strong>
+  <%= @pharmacy_license.applicant_contact %>
+</p>
+
+<p>
+  <strong>Applicant address:</strong>
+  <%= @pharmacy_license.applicant_address %>
+</p>
+
+<p>
+  <strong>Receipt number:</strong>
+  <%= @pharmacy_license.receipt_number %>
+</p>
+
+<p>
+  <strong>Ein:</strong>
+  <%= @pharmacy_license.ein %>
+</p>
+
+<p>
+  <strong>Signature:</strong>
+  <%= @pharmacy_license.signature %>
+</p>
+
+<%= link_to 'Edit', edit_pharmacy_license_path(@pharmacy_license) %> |
+<%= link_to 'Back', pharmacy_licenses_path %>

@@ -1,0 +1,47 @@
+<%= form_with(model: manufacturer_license, local: true) do |form| %>
+  <% if manufacturer_license.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(manufacturer_license.errors.count, "error") %> prohibited this manufacturer_license from being saved:</h2>
+
+      <ul>
+      <% manufacturer_license.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :applicant_name %>
+    <%= form.text_field :applicant_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :applicant_contact %>
+    <%= form.text_field :applicant_contact %>
+  </div>
+
+  <div class="field">
+    <%= form.label :applicant_address %>
+    <%= form.text_area :applicant_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :receipt_number %>
+    <%= form.text_field :receipt_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ein %>
+    <%= form.text_field :ein %>
+  </div>
+
+  <div class="field">
+    <%= form.label :signature %>
+    <%= form.text_area :signature %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
