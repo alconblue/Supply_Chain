@@ -9,6 +9,17 @@ Rails.application.routes.draw do
   resources :customer_licenses
   resources :pharmacy_licenses
   resources :manufacturer_licenses
+  
+  get 'finalisetransaction', to: "finalisetransaction#create"
+  get 'finalisetransaction/new'
+  get 'finalisetransaction/destroy'
+  get 'initiatetransaction', to: "initiatetransaction#create"
+  get 'initiatetransaction/new'
+  get 'initiatetransaction/destroy'
+  get 'issuelicense', to: "issuelicense#create"
+  get 'issuelicense/new'
+  get 'issuelicense/destroy'
+
   get 'drugadd/new'
   get 'drugadd', to: "drugadd#create"
   get 'drugadd/destroy'
