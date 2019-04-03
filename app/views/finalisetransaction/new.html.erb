@@ -1,0 +1,7 @@
+<h1>Finalisetransaction#new</h1>
+<p>Find me in app/views/finalisetransaction/new.html.erb</p>
+<%= form_tag("/finalisetransaction", method: "get") do %>
+    <%= label_tag(:commodity, "Batch Number") %>
+    <%= text_field_tag(:commodity) %><br>
+    <%= submit_tag("Initiate Transaction") %>
+  <% end %>

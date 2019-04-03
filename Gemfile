@@ -66,3 +66,5 @@ gem 'devise'
 gem 'paperclip'
 
 gem 'omniauth-github', '1.1.1'
+
+gem 'rest-client'
