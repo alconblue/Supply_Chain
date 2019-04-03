@@ -36,6 +36,41 @@
     <%= form.text_field :ein %>
   </div>
 
+  <div class="form-group">
+    <%= form.label :resolution_by_board %>
+    <%= form.file_field :resolution_by_board, class: 'form-control'%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :blueprint %>
+    <%= form.file_field :blueprint, class: 'form-control'%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :proof_of_ownership %>
+    <%= form.file_field :proof_of_ownership, class: 'form-control'%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :pharmacist_affidavit %>
+    <%= form.file_field :pharmacist_affidavit, class: 'form-control'%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :degree_certificate %>
+    <%= form.file_field :degree_certificate, class: 'form-control'%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :invoice_for_ac %>
+    <%= form.file_field :invoice_for_ac, class: 'form-control'%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :invoice_for_refrigerator %>
+    <%= form.file_field :invoice_for_refrigerator, class: 'form-control'%>
+  </div>
+
   <div class="field">
     <%= form.label :signature %>
     <%= form.text_area :signature %>

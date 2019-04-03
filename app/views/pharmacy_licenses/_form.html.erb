@@ -36,6 +36,25 @@
     <%= form.text_field :ein %>
   </div>
 
+  <div class="form-group">
+    <%= form.label :blueprint %>
+    <%= form.file_field :blueprint, class: 'form-control'%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :proof_of_ownership %>
+    <%= form.file_field :proof_of_ownership, class: 'form-control'%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :pharmacist_affidavit %>
+    <%= form.file_field :pharmacist_affidavit, class: 'form-control'%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :affidavit_of_nonconviction %>
+    <%= form.file_field :affidavit_of_nonconviction, class: 'form-control'%>
+  </div>
   <div class="field">
     <%= form.label :signature %>
     <%= form.text_area :signature %>
