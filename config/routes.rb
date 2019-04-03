@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :distributor_licenses
+  resources :customer_licenses
+  resources :pharmacy_licenses
+  resources :manufacturer_licenses
   get 'drugadd/new'
   get 'drugadd', to: "drugadd#create"
   get 'drugadd/destroy'

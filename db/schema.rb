@@ -10,7 +10,123 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_01_162218) do
+ActiveRecord::Schema.define(version: 2019_04_03_040230) do
+
+  create_table "customer_licenses", force: :cascade do |t|
+    t.string "applicant_name"
+    t.string "applicant_contact"
+    t.text "applicant_address"
+    t.integer "id_type"
+    t.string "id_no"
+    t.text "signature"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "approved"
+  end
+
+  create_table "distributor_licenses", force: :cascade do |t|
+    t.string "applicant_name"
+    t.string "applicant_contact"
+    t.text "applicant_address"
+    t.string "receipt_number"
+    t.string "ein"
+    t.text "signature"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "resolution_by_board_file_name"
+    t.string "resolution_by_board_content_type"
+    t.bigint "resolution_by_board_file_size"
+    t.datetime "resolution_by_board_updated_at"
+    t.string "blueprint_file_name"
+    t.string "blueprint_content_type"
+    t.bigint "blueprint_file_size"
+    t.datetime "blueprint_updated_at"
+    t.string "proof_of_ownership_file_name"
+    t.string "proof_of_ownership_content_type"
+    t.bigint "proof_of_ownership_file_size"
+    t.datetime "proof_of_ownership_updated_at"
+    t.string "pharmacist_affidavit_file_name"
+    t.string "pharmacist_affidavit_content_type"
+    t.bigint "pharmacist_affidavit_file_size"
+    t.datetime "pharmacist_affidavit_updated_at"
+    t.string "degree_certificate_file_name"
+    t.string "degree_certificate_content_type"
+    t.bigint "degree_certificate_file_size"
+    t.datetime "degree_certificate_updated_at"
+    t.string "invoice_for_refrigerator_file_name"
+    t.string "invoice_for_refrigerator_content_type"
+    t.bigint "invoice_for_refrigerator_file_size"
+    t.datetime "invoice_for_refrigerator_updated_at"
+    t.string "invoice_for_ac_file_name"
+    t.string "invoice_for_ac_content_type"
+    t.bigint "invoice_for_ac_file_size"
+    t.datetime "invoice_for_ac_updated_at"
+    t.integer "approved"
+  end
+
+  create_table "manufacturer_licenses", force: :cascade do |t|
+    t.string "applicant_name"
+    t.string "applicant_contact"
+    t.text "applicant_address"
+    t.string "receipt_number"
+    t.string "ein"
+    t.text "signature"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "resolution_by_board_file_name"
+    t.string "resolution_by_board_content_type"
+    t.bigint "resolution_by_board_file_size"
+    t.datetime "resolution_by_board_updated_at"
+    t.string "blueprint_file_name"
+    t.string "blueprint_content_type"
+    t.bigint "blueprint_file_size"
+    t.datetime "blueprint_updated_at"
+    t.string "proof_of_ownership_file_name"
+    t.string "proof_of_ownership_content_type"
+    t.bigint "proof_of_ownership_file_size"
+    t.datetime "proof_of_ownership_updated_at"
+    t.string "list_of_equipments_file_name"
+    t.string "list_of_equipments_content_type"
+    t.bigint "list_of_equipments_file_size"
+    t.datetime "list_of_equipments_updated_at"
+    t.string "list_of_staff_file_name"
+    t.string "list_of_staff_content_type"
+    t.bigint "list_of_staff_file_size"
+    t.datetime "list_of_staff_updated_at"
+    t.string "list_of_products_file_name"
+    t.string "list_of_products_content_type"
+    t.bigint "list_of_products_file_size"
+    t.datetime "list_of_products_updated_at"
+    t.integer "approved"
+  end
+
+  create_table "pharmacy_licenses", force: :cascade do |t|
+    t.string "applicant_name"
+    t.string "applicant_contact"
+    t.text "applicant_address"
+    t.string "receipt_number"
+    t.string "ein"
+    t.text "signature"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "blueprint_file_name"
+    t.string "blueprint_content_type"
+    t.bigint "blueprint_file_size"
+    t.datetime "blueprint_updated_at"
+    t.string "proof_of_ownership_file_name"
+    t.string "proof_of_ownership_content_type"
+    t.bigint "proof_of_ownership_file_size"
+    t.datetime "proof_of_ownership_updated_at"
+    t.string "pharmacist_affidavit_file_name"
+    t.string "pharmacist_affidavit_content_type"
+    t.bigint "pharmacist_affidavit_file_size"
+    t.datetime "pharmacist_affidavit_updated_at"
+    t.string "affidavit_of_nonconviction_file_name"
+    t.string "affidavit_of_nonconviction_content_type"
+    t.bigint "affidavit_of_nonconviction_file_size"
+    t.datetime "affidavit_of_nonconviction_updated_at"
+    t.integer "approved"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

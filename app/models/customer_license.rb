@@ -1,0 +1,2 @@
+class CustomerLicense < ApplicationRecord
+end

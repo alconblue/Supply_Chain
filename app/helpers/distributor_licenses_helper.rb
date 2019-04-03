@@ -1,0 +1,2 @@
+module DistributorLicensesHelper
+end

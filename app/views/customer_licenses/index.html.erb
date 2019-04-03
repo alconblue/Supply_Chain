@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Customer Licenses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Applicant name</th>
+      <th>Applicant contact</th>
+      <th>Applicant address</th>
+      <th>Id type</th>
+      <th>Id no</th>
+      <th>Signature</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customer_licenses.each do |customer_license| %>
+      <tr>
+        <td><%= customer_license.applicant_name %></td>
+        <td><%= customer_license.applicant_contact %></td>
+        <td><%= customer_license.applicant_address %></td>
+        <td><%= customer_license.id_type %></td>
+        <td><%= customer_license.id_no %></td>
+        <td><%= customer_license.signature %></td>
+        <td><%= link_to 'Show', customer_license %></td>
+        <td><%= link_to 'Edit', edit_customer_license_path(customer_license) %></td>
+        <td><%= link_to 'Destroy', customer_license, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Customer License', new_customer_license_path %>
