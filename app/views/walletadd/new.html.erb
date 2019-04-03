@@ -1,0 +1,9 @@
+<h1>Walletadd#new</h1>
+<p>Find me in app/views/walletadd/new.html.erb</p>
+<%= form_tag("/drugadd", method: "get") do %>
+  <%= label_tag(:card, "Card") %>
+  <%= file_field_tag(:card) %><br>
+  <%= label_tag(:name, "Name") %>
+  <%= text_field_tag(:name) %><br>
+  <%= submit_tag("Import wallet") %>
+<% end %>

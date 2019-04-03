@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'walletadd',to:"walletadd#create"
+  get 'walletadd/new'
+  get 'walletadd/destroy'
+  get 'traderadd',to:"traderadd#create"
+  get 'traderadd/new'
+  get 'traderadd/destroy'
   resources :distributor_licenses
   resources :customer_licenses
   resources :pharmacy_licenses
