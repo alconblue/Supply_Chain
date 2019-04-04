@@ -4,7 +4,13 @@ class CustomerLicensesController < ApplicationController
   # GET /customer_licenses
   # GET /customer_licenses.json
   def index
-    @customer_licenses = CustomerLicense.all
+    if current_user.user_type == 0
+      @customer_licenses = CustomerLicense.where(:approved => 2)
+    elsif current_user.user_type == 4
+      @customer_licenses = CustomerLicense.where(:user_id => current_user.id)
+    else
+      redirect_to '/'
+    end
   end
 
   # GET /customer_licenses/1
