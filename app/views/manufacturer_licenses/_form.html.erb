@@ -1,4 +1,4 @@
-<%= form_with(model: manufacturer_license, local: true) do |form| %>
+<%= form_with(model: manufacturer_license, local: true, class: "form-style") do |form| %>
   <% if manufacturer_license.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(manufacturer_license.errors.count, "error") %> prohibited this manufacturer_license from being saved:</h2>

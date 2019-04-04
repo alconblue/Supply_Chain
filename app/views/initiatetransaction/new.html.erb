@@ -1,6 +1,6 @@
 <h1>Initiatetransaction#new</h1>
 <p>Find me in app/views/initiatetransaction/new.html.erb</p>
-<%= form_tag("/initiatetransaction", method: "get") do %>
+<%= form_tag("/initiatetransaction", method: "get", class: "form-style") do %>
     <%= label_tag(:commodity, "Batch Number") %>
     <%= text_field_tag(:commodity) %><br>
     <%= label_tag(:newOwner, "New Owner") %>

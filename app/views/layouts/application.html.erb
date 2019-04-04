@@ -9,30 +9,35 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style="margin: 2px; border: 2px;">
   <% if user_signed_in? %>
-    <%= form_tag("/session", method: "get") do %>
-      <%= label_tag(:token, "Access Token:") %>
+    <div class="headerclass">
+    <h1 style="text-align: center; font-size: 40px; color: white;">Drug Supplychain Management System</h1>
+    <%= form_tag("/session", method: "get", class: "form") do %>
+      <%= label_tag(:token, "Access Token", class: "label", :style=> 'color:white;') %>
       <%= text_field_tag(:token) %>
       <%= submit_tag("Set Token") %>
-    <% end %>
+    </div>
   <% end %>
-    <% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
 <% end %>
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
+    <div id="temp1" style="padding: 60px;">
+
     <%= yield %>
+    </div>
+    <div style="position: fixed; bottom: 0; background-color: #5068c2; width: 100%; color: white; ">
     <p class="navbar-text pull-right">
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-<% end %>
-</p>
+      <% if user_signed_in? %>
+        Logged in as <strong><%= current_user.email %></strong>.
+        <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link', :style=> 'color:white;' %> |
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link', :style=> 'color:white;'  %>
+      <% else %>
+        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link', :style=> 'color:white;'  %> |
+        <%= link_to "Login", new_user_session_path, :class => 'navbar-link', :style=> 'color:white;'  %>
+      <% end %>
+    </p>
+    </div>
   </body>
 </html>

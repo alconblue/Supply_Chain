@@ -1,73 +1,71 @@
-<p id="notice"><%= notice %></p>
-
-<p>
+<p >
   <strong>Applicant name:</strong>
   <%= @manufacturer_license.applicant_name %>
 </p>
 
-<p>
+<p >
   <strong>Applicant contact:</strong>
   <%= @manufacturer_license.applicant_contact %>
 </p>
 
-<p>
+<p >
   <strong>Applicant address:</strong>
   <%= @manufacturer_license.applicant_address %>
 </p>
 
-<p>
+<p >
   <strong>Receipt number:</strong>
   <%= @manufacturer_license.receipt_number %>
 </p>
 
-<p>
+<p >
   <strong>Ein:</strong>
   <%= @manufacturer_license.ein %>
 </p>
 
-<p>
+<p >
   <strong>Resolution By Board:</strong>
   <% if !@manufacturer_license.resolution_by_board_file_name.nil? %>
   <%= link_to "Resolution By Board", @manufacturer_license.resolution_by_board.url(:original, false)%>
   <%end%>
 </p>
 
-<p>
+<p >
   <strong>Blueprint:</strong>
   <% if !@manufacturer_license.blueprint_file_name.nil? %>
   <%= link_to "Blueprint", @manufacturer_license.blueprint.url(:original, false) %>
   <%end%>
 </p>
 
-<p>
+<p >
   <strong>Proof Of Ownership:</strong>
   <% if !@manufacturer_license.proof_of_ownership_file_name.nil? %>
   <%= link_to "Proof Of Ownership", @manufacturer_license.proof_of_ownership.url(:original, false) %>
   <%end%>
 </p>
 
-<p>
+<p >
   <strong>List of Equipments:</strong>
   <% if !@manufacturer_license.list_of_equipments_file_name.nil? %>
   <%= link_to "List of Equipments", @manufacturer_license.list_of_equipments.url(:original, false) %>
   <%end%>
 </p>
 
-<p>
+<p >
   <strong>List of Staff:</strong>
   <% if !@manufacturer_license.list_of_staff_file_name.nil? %>
   <%= link_to "List of Staff", @manufacturer_license.list_of_staff.url(:original, false) %>
   <%end%>
 </p>
 
-<p>
+<p >
   <strong>List of Products:</strong>
   <% if !@manufacturer_license.list_of_products_file_name.nil? %>
   <%= link_to "List of Products", @manufacturer_license.list_of_products.url(:original, false) %>
   <%end%>
 </p>
 
-<p>
+<p >
   <strong>Signature:</strong>
   <%= @manufacturer_license.signature %>
 </p>
