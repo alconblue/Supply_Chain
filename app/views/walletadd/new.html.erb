@@ -1,5 +1,4 @@
-<p>Find me in app/views/walletadd/new.html.erb</p>
-<%= form_tag("/drugadd", method: "get") do %>
+<%= form_tag("/drugadd", method: "get" , class: "form-style") do %>
   <%= label_tag(:card, "Card") %>
   <%= file_field_tag(:card) %><br>
   <%= label_tag(:name, "Name") %>
