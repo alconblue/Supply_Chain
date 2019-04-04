@@ -10,6 +10,13 @@
   </head>
 
   <body>
+  <% if user_signed_in? %>
+    <%= form_tag("/session", method: "get") do %>
+      <%= label_tag(:token, "Access Token:") %>
+      <%= text_field_tag(:token) %>
+      <%= submit_tag("Set Token") %>
+    <% end %>
+  <% end %>
     <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>
