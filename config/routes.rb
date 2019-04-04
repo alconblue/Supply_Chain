@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'getfinalise/new'
+  get 'getinitiate/new'
+  get 'gettrader/new'
+  get 'getdrug/new'
+  
   get 'reject_customer/:id', to: 'reject_customer#reject', as: 'reject_customer'
   get 'approve_costumer/:id', to: 'approve_costumer#approve', as: 'accept_customer'
   get 'approve_costumer', to: 'approve_costumer#addLicense'
