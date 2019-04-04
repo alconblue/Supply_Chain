@@ -76,6 +76,6 @@ class ManufacturerLicensesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def manufacturer_license_params
-      params.require(:manufacturer_license).permit(:applicant_name, :applicant_contact, :applicant_address, :receipt_number, :ein, :signature)
+      params.require(:manufacturer_license).permit(:applicant_name, :applicant_contact, :applicant_address, :receipt_number, :ein, :signature, :resolution_by_board, :blueprint, :proof_of_ownership, :list_of_equipments, :list_of_staff, :list_of_products)
     end
 end
