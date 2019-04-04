@@ -76,6 +76,6 @@ class PharmacyLicensesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pharmacy_license_params
-      params.require(:pharmacy_license).permit(:applicant_name, :applicant_contact, :applicant_address, :receipt_number, :ein, :signature)
+      params.require(:pharmacy_license).permit(:applicant_name, :applicant_contact, :applicant_address, :receipt_number, :ein, :signature, :blueprint, :proof_of_ownership, :pharmacist_affidavit, :affidavit_of_nonconviction)
     end
 end

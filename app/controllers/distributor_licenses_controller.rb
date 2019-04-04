@@ -76,6 +76,6 @@ class DistributorLicensesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def distributor_license_params
-      params.require(:distributor_license).permit(:applicant_name, :applicant_contact, :applicant_address, :receipt_number, :ein, :signature)
+      params.require(:distributor_license).permit(:applicant_name, :applicant_contact, :applicant_address, :receipt_number, :ein, :signature, :resolution_by_board, :blueprint, :proof_of_ownership, :pharmacist_affidavit, :degree_certificate, :invoice_for_ac, :invoice_for_refrigerator)
     end
 end
