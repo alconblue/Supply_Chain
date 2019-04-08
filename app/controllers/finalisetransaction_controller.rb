@@ -9,7 +9,7 @@ class FinalisetransactionController < ApplicationController
   	s += current_user.id.to_s
   	s += "\"\n}'"
   	system(s)
-  	@s3 = s
+    @s3 = s
     redirect_to '/'
   end
 

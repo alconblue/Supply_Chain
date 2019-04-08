@@ -1,22 +1,23 @@
-<% if current_user.user_type==1 %>
+<% if current_user.user_type==1 || current_user.user_type==0%>
 <%= link_to '<button type="button">manufacturer_licenses</button>'.html_safe, manufacturer_licenses_path %>
 <%end%>
-<% if current_user.user_type==2 %>
+<% if current_user.user_type==2 || current_user.user_type==0%>
 <%= link_to '<button type="button">distributor_licenses</button>'.html_safe, distributor_licenses_path %>
 <%end%>
-<% if current_user.user_type==3 %>
+<% if current_user.user_type==3 || current_user.user_type==0%>
 <%= link_to '<button type="button">pharmacy_licenses</button>'.html_safe, pharmacy_licenses_path %>
 <%end%>
-<% if current_user.user_type==4 %>
+<% if current_user.user_type==4 || current_user.user_type==0%>
 <%= link_to '<button type="button">customer_licenses</button>'.html_safe, customer_licenses_path %>
 <%end%>
-<% if current_user.user_type!=4 && current_user.user_type!=0%>
+<% if current_user.user_type!=4 && current_user.user_type!=0  %>
 <%= link_to '<button type="button">initiatetransaction</button>'.html_safe, initiatetransaction_new_path %>
 <%end%>
-<% if current_user.user_type!=1 && current_user.user_type!=0%>
-<%= link_to '<button type="button">finalisetransaction</button>'.html_safe, finalisetransaction__new_path %>
+<% if current_user.user_type!=1 && current_user.user_type!=0  %>
+<%= link_to '<button type="button">finalisetransaction</button>'.html_safe, finalisetransaction_new_path %>
 <%end%>
-<% if current_user.user_type==1 && current_user.user_type!=0%>
+<% @C %>
+<% if current_user.user_type==1 && current_user.user_type!=0  %>
 <%= link_to '<button type="button">drugadd</button>'.html_safe, drugadd_new_path %>
 <%end%>
 <% if current_user.user_type==0%>

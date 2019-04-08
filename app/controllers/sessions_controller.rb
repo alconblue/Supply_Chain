@@ -1,6 +1,10 @@
 class SessionsController < ApplicationController
   before_action :authenticate_user!
   def new
+    @M=ManufacturerLicense.where(:user_id => current_user.id).where(:approved => 1);
+    @C=CustomerLicense.where(:user_id => current_user.id).where(:approved => 1);
+    @D=DistributorLicense.where(:user_id => current_user.id).where(:approved => 1);
+    @P=PharmacyLicense.where(:user_id => current_user.id).where(:approved => 1);
   end
 
   def create

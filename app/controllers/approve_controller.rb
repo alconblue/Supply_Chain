@@ -38,8 +38,14 @@ class ApproveController < ApplicationController
     	s += session[:user_id].to_s
     	s += "\"\n}'"
       system(s)
-      # s = 'composer identity issue -u '+params[:firstName]+session[:user_id].to_s+' -c admin@drugtraceability-network  -a "resource:org.nitk.drugtraceability.Trader#'+session[:user_id].to_s+'"'
-      # system(s)
+       s = 'composer identity issue -u '+params[:firstName]+session[:user_id].to_s+' -c admin@drugtraceability-network  -a "resource:org.nitk.drugtraceability.Trader#'+session[:user_id].to_s+'"'
+       system(s)
+       s = "mv " + params[:firstName]+session[:user_id].to_s + "@drugtraceability.card" + params[:firstName]+session[:user_id].to_s + ".card" 
+       system(s)
+       user = User.find_by_id(session[:user_id])
+       s="curl -X POST --header 'Content-Type: multipart/form-data' --header 'Accept: application/json' 'http://10.52.38.162:3000/api/wallet/import?name=" + params[:firstName]+session[:user_id].to_s + "-H 'X-Access-Token: \"" + user.token + "\"' -F 'card=@"
+       s += params[:firstName]+session[:user_id].to_s + ".card'"
+       system(s)
       redirect_to '/'
     else
       redirect_to '/'
