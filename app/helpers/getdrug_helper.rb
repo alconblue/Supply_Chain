@@ -1,0 +1,2 @@
+module GetdrugHelper
+end
