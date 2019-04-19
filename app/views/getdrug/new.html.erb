@@ -1,1 +1,33 @@
-<%= @response %>
+<!-- <%= @response %> -->
+<table>
+	<thead>
+	<tr>
+	  <th>Class</th>
+      <th>Batch </th>
+      <th>description</th>
+      <th>drug_name</th>
+      <th>drug_id</th>
+      <th>expiry_date</th>
+      <th>MRP</th>
+      <th>owner</th>
+      <th>producer</th>
+      <th>proposed_owner</th>
+    </tr>
+</thead>
+<tbody>
+<% for item in @response %>
+    <tr>
+      <td><%= item["$class"].to_s %></td>
+      <td><%= item["batchno"].to_s %></td>
+      <td><%= item["description"].to_s %></td>
+      <td><%= item["drug_name"].to_s %></td>
+      <td><%= item["drug_id"].to_s %></td>
+      <td><%= item["expiry_date"].to_s %></td>
+      <td><%= item["MRP"].to_s %></td>
+      <td><%= item["owner"].to_s %></td>
+      <td><%= item["producer"].to_s %></td>
+      <td><%= item["proposed_owner"].to_s %></td>
+    </tr>
+<% end %>
+</tbody>
+</table>
